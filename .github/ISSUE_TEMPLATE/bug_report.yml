@@ -1,0 +1,51 @@
+name: Bug report
+description: Something in the plugin or the runtime doesn't work as the docs say.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: AcesMotion version
+      description: Settings > About shows it.
+      placeholder: "0.14.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where it happens
+      options:
+        - In Studio (the plugin)
+        - In a game (the runtime)
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What you did, one step per line.
+      placeholder: |
+        1. Open a scene with one rig
+        2. Select the keys at frame 30
+        3. Press Shift+D
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Include any error from Studio's Output window.
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Video, screenshots or scene text
+      description: Drag files here. Export > Scene as text copies a whole scene as text you can paste.
